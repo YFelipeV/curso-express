@@ -1,0 +1,23 @@
+<%- include("partials/header")%>
+<%- include("partials/nav")%>
+    <h1>pagina con expresss</h1>
+    <p><%= title %></p>
+
+    <% if (isActive){%>
+    <p>el servidor esta activo</p>
+    <%} else{ %>
+    <p>el servidor es inactivo</p>
+    <%} %>
+
+    <%= new Date() %>
+    <hr>
+    <ul>
+    <% for(let i =0 ; i < users.length;i++ ){ %>
+       <li><%= users[i].name%> <%= users[i].apellido%> </li>
+    <% } %>
+
+</ul>
+
+
+
+    <%- include("partials/footer")%>
